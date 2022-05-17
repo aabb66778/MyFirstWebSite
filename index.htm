@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 標題 <h1> ~ <h6> -->
+    <h1 title="真的有很神奇嗎??">最簡單神奇的快速記憶法</h1>
+    <h2>油漆式速記法</h2>
+    水平分割線&lt;hr&gt;，還可以透過align、size、width、noshade等屬性來調整外觀。
+    <!-- 水平的分割線<hr> -->
+    <hr>
+    <!-- 段落換行 <p>、<br> 
+        p:段落(paragraph)
+        br:換行()
+    -->
+    <p>&lt;p&gt; 這是第一個段落 &lt;/p&gt;</p>
+    <p>這是第二個段落，&lt;br&gt; <br>
+    其中有使用換行指令(br)
+    </p><hr>
+    <!-- 條列式清單 -->
+    <h3>條列式清單</h3>
+    <h4>符號清單&lt;ul&gt;&lt;li&gt;</h4>
+    符號清單又稱為「無序清單」(Unordered list)，使用方法如下：<br>
+    <code>
+        &lt;ul&gt; <br>
+        &lt;li&gt; 第一個清單 &lt;/li&gt; <br>
+        &lt;li&gt; 第二個清單 &lt;/li&gt; <br>
+        &lt;li&gt; 第三個清單 &lt;/li&gt; <br>
+        &lt;/ul&gt;<br>
+    </code>
+
+        <h4>結果</h4>
+    <ul>
+        <li value="20125" style="list-style: trad-chinese-formal inside;"> 第一個清單 </li>
+        <li value="20125" style="list-style: trad-chinese-formal outside;"> 第二個清單 </li>
+        <li> 第三個清單 </li>
+    </ul>
+    <h4>備註</h4>
+    以往可以使用type屬性來設定清單，因為HTML5不再支援，所以清單樣式必須使用CSS的list-style-type:disc語法來定義。其標記如下：<br>
+    <code>&lt;ul style="list-style-type:disc"&gt;</code>
+    <ul style="list-style-type:disc">
+        <li> 實心的圖形 disc，預設標籤
+            <ul style="list-style-type:circle">
+                <li> 空心圓形 circle</li>
+            </ul>
+            <ul style="list-style-type:square">
+                <li> 實心方形 square</li>
+            </ul>
+            <ul style="list-style-type:none">
+                <li> 無 none </li>
+            </ul>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+    <h4>編號清單&lt;ol&gt;&lt;li&gt;</h4>
+    編號清單又稱為「有序清單」(Ordered list)，使用如下：<br>
+    <code>
+        &lt;ol &gt; <br>
+        &lt;li&gt; 第一個清單 &lt;/li&gt; <br>
+        &lt;li&gt; 第二個清單 &lt;/li&gt; <br>
+        &lt;li&gt; 第三個清單 &lt;/li&gt; <br>
+        &lt;/ol&gt;<br>
+    </code>
+
+    <h4>結果</h4>
+    <ol>
+        <li> 第一個序號 </li>
+        <li> 第二個序號 </li>
+        <li> 第三個序號 </li>
+    </ol>
+ 
+
+    <h4>編號清單類型</h4>
+    type類型有5種、start則是從第幾個開始算。
+    <ul>
+        <li>阿拉伯數字：type="1"，1、2、3...  </li>
+        <li>大寫英文數字：type="A"，A、B、C...  </li>
+        <li>小寫英文數字：type="a"，a、b、c...  </li>
+        <li>大寫羅馬數字：type="I"，I、II、III...  </li>
+        <li>小寫羅馬數字：type="i"，i、ii、iii...  </li>
+    </ul>
+
+    <h4>結果</h4>
+    <ol type="A" start=5>
+        <li> 第一個序號 </li>
+        <li> 第二個序號 </li>
+        <li> 第三個序號 </li>
+    </ol>
+
+    <hr>
+    <h4>定義清單&lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</h4>
+    <dl>
+        定義清單(Definition List，用&lt;dl&gt;作為標記)，每個要項都包含兩個要素：主題標和次要項的內容，而次要項會以梭旁的方式來顯示。
+        <dt>
+            主題標需以&lt;dt&gt;作為標記
+            <dd>
+                而次要內容則是&lt;dd&gt;作為標記
+            </dd>
+        </dt>
+        <dt>
+            主題標2
+            <dd>
+                次要內容2。
+            </dd>
+        </dt>
+    </dl>
+    <hr>
+
+    <!-- 連接目標屬性設定 -->
+    <h4>超連結測試</h4>
+    <ul>
+    <li><a href="https://www.google.com/" target="_blank" style="cursor:crosshair;">前往GOOGLE網站，在新視窗中開啟。</a></li>
+    <li><a href="https://www.google.com/" target="_self">前往GOOGLE網站，在目前的視窗中開啟。</a></li>
+    <li><a href="https://www.google.com/" target="_parent">前往GOOGLE網站，在目前的視窗中開啟，<br>但是在框架式網頁中，會在上一層頁框中開啟目標網頁。</a></li>
+    <li><a href="https://www.google.com/" target="_top">前往GOOGLE網站，會開啟在瀏覽器的視窗，<br>如有框架，網頁中的所有頁框都會被移除。</a></li>
+    </ul>
+    <p>
+        測試超連結設定郵件→
+    <a href="mailto:aabb66778@gmail.com?Subject=測試用">寄電子郵件給aabb66778</a>
+    </p>
+    <hr>
+
+</body>
+</html>
